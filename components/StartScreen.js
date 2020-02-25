@@ -38,14 +38,15 @@ let confirmedNumber;
 if (confirmed) {
     confirmedNumber = <Card style={styles.summaryContainer}>
         <Text>
-            You Chose
+            You Chose: {"\n"}
         </Text>
-        <View>
-            <Text>
+        
+        <View style={styles.numberConfirm}>
+            <Text style={styles.numberText}>
                 {selectedNumber}
             </Text>
-            <Button title="START"/>
         </View>
+        <Button onPress={()=>{props.onStartGame(selectedNumber)}} title="START"/>
     </Card>
 }
 
@@ -117,12 +118,27 @@ const styles = StyleSheet.create({
         alignItems:'center',
         // justifyContent:'center',
         flexDirection:'row',
-        justifyContent:'space-between',
+        justifyContent: 'space-evenly',
         paddingHorizontal: 20
+      
     },
     summaryContainer: {
+        width: '50%',
         margin: 30,
-        alignContent:'center'
+        alignItems:'center',
+        justifyContent: 'center'
+    },
+    numberConfirm: {
+        fontSize: 30,
+        alignItems: 'center',
+        borderColor: 'cyan',
+        borderWidth: 3,
+        width: 50,
+        borderRadius: 10
+    },
+    numberText: {
+        fontSize: 30,
+        color: 'blue'
     }
 
 })

@@ -16,6 +16,9 @@ const generateRandomBetween = (min, max, exclude) => {
 const GameScreen = props => {
     const [currentGuess, setCurrentGuess] = useState(generateRandomBetween(1, 100, props.userChoice))
 
+    return(
+        <Text>{props.userChoice}</Text>
+    )
 }
 
 const styles = StyleSheet.create({
