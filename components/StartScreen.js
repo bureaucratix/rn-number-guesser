@@ -55,11 +55,12 @@ if (confirmed) {
 <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 <View style={styles.screen}>
 
-            <Text>New Game</Text>
+            <Text style={styles.titleText} > {"\n"}New Game of Guess a Number! {"\n"}</Text>
+            <Text> Pick a number between 1 and 99 and we'll try to guess.  {"\n"}</Text>
             <Card style={styles.inputContainer}>
             
 
-                <View style={{alignItems:'center'}} >
+                <View style={styles.titleCard} >
                     <Text>Enter a Number!</Text>
                     <Input 
                         blurOnSubmit 
@@ -139,6 +140,13 @@ const styles = StyleSheet.create({
     numberText: {
         fontSize: 30,
         color: 'blue'
+    },
+    titleCard: {
+        alignItems:'center'
+    },
+    titleText: {
+        fontSize: 20,
+        fontFamily: 'open-sans'
     }
 
 })
