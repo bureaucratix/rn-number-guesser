@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button} from 'react-native'
+import { View, Text, StyleSheet, Button, Image} from 'react-native'
 import Card from './CardStyle'
 
 
@@ -17,6 +17,8 @@ const PostGameScreen = props => {
             <Card style={styles.guessContainer}>
                 <Text style={{fontSize:20, fontWeight:'bold'}}> {props.guessesNum} </Text>
             </Card>
+            <Image style={{width:'80%', height:300}}
+            source={require("../assets/trophy.jpeg")} />
             <Button title="AGAIN!" onPress={goToStart}> </Button>
 
         </View>
